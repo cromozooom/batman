@@ -1,0 +1,192 @@
+@import includes/variables
+
+// Bootstrap (only core)
+// Core variables and mixins
+@import bootstrap-sass/assets/stylesheets/bootstrap/variables
+@import bootstrap-sass/assets/stylesheets/bootstrap/mixins
+
+// Reset and dependencies
+@import bootstrap-sass/assets/stylesheets/bootstrap/normalize
+@import bootstrap-sass/assets/stylesheets/bootstrap/print
+@import bootstrap-sass/assets/stylesheets/bootstrap/glyphicons
+
+// Core CSS
+@import bootstrap-sass/assets/stylesheets/bootstrap/scaffolding
+@import bootstrap-sass/assets/stylesheets/bootstrap/type
+@import bootstrap-sass/assets/stylesheets/bootstrap/code
+@import bootstrap-sass/assets/stylesheets/bootstrap/grid
+@import bootstrap-sass/assets/stylesheets/bootstrap/tables
+@import bootstrap-sass/assets/stylesheets/bootstrap/forms
+@import bootstrap-sass/assets/stylesheets/bootstrap/buttons
+
+// Components
+@import bootstrap-sass/assets/stylesheets/bootstrap/component-animations
+@import bootstrap-sass/assets/stylesheets/bootstrap/dropdowns
+@import bootstrap-sass/assets/stylesheets/bootstrap/button-groups
+@import bootstrap-sass/assets/stylesheets/bootstrap/input-groups
+@import bootstrap-sass/assets/stylesheets/bootstrap/navs
+@import bootstrap-sass/assets/stylesheets/bootstrap/navbar
+@import bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs
+@import bootstrap-sass/assets/stylesheets/bootstrap/pagination
+@import bootstrap-sass/assets/stylesheets/bootstrap/pager
+@import bootstrap-sass/assets/stylesheets/bootstrap/labels
+@import bootstrap-sass/assets/stylesheets/bootstrap/badges
+@import bootstrap-sass/assets/stylesheets/bootstrap/jumbotron
+@import bootstrap-sass/assets/stylesheets/bootstrap/thumbnails
+@import bootstrap-sass/assets/stylesheets/bootstrap/alerts
+@import bootstrap-sass/assets/stylesheets/bootstrap/progress-bars
+@import bootstrap-sass/assets/stylesheets/bootstrap/media
+@import bootstrap-sass/assets/stylesheets/bootstrap/list-group
+@import bootstrap-sass/assets/stylesheets/bootstrap/panels
+@import bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed
+@import bootstrap-sass/assets/stylesheets/bootstrap/wells
+@import bootstrap-sass/assets/stylesheets/bootstrap/close
+
+// Components w/ JavaScript
+@import bootstrap-sass/assets/stylesheets/bootstrap/modals
+@import bootstrap-sass/assets/stylesheets/bootstrap/tooltip
+@import bootstrap-sass/assets/stylesheets/bootstrap/popovers
+@import bootstrap-sass/assets/stylesheets/bootstrap/carousel
+
+// Utility classes
+@import bootstrap-sass/assets/stylesheets/bootstrap/utilities
+@import bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities
+
+
+
+// Fonts
+
+// Core
+@import includes/mixins
+
+// Layout
+@import layout/common
+@import layout/header
+@import layout/footer
+@import layout/main
+
+// Components
+
+$heroHeghtDesktop: 700px
+$heroHeghtTablet: 450px
+
+
+.row-no-padding
+	margin-left: 0
+	margin-right: 0
+	[class*="col-"]
+		padding-left: 0 !important
+		padding-right: 0 !important
+
+.full
+	padding-left: 0
+	padding-right: 0
+	margin-left: 0
+	margin-right: 0
+	width: 100vw
+
+section
+	background: black
+
+.offer
+	width: 100vw
+	overflow: hidden
+	position: relative
+	//border: 1px solid red
+	//overflow: hidden
+	height: $heroHeghtDesktop
+	&__heroImage
+		position: relative
+		//border: 1px solid blue
+		//display: inline-block
+		height: $heroHeghtDesktop
+		width: 100vw
+		overflow: hidden
+		img
+			display: block
+			//width: auto
+			height: $heroHeghtDesktop
+			z-index: 1
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+	&__content
+		width: 100vw
+		margin: 0
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate( -50%, -50%)
+		z-index: 2
+	&__image, &__video
+		img
+			margin: 0 auto
+
+//@media (max-width: $screen-sm-max) and (max-width: $screen-md-min)
+@media (max-width: $screen-md-max)
+	.offer
+		width: 100vw
+		overflow: scroll
+		height: auto
+		&__heroImage
+			//position: relative
+			//border: 1px solid blue
+			//display: inline-block
+			height: $heroHeghtTablet
+			width: 100vw
+			//overflow: hidden
+		&__content
+			width: 100vw
+			position: static
+			top: 0
+			left: 0
+			transform: translate( 0, 0)
+			z-index: 2
+			img
+				//border: 1px solid red
+				position: static
+				top: 50%
+				left: 50%
+				transform: translate( 0, 0)
+		&__image, &__video
+			img
+				margin: 0 auto
+
+
+	//&__video
+		//position: absolute
+		//top: 0
+//	.offer
+//		&__heroImage
+
+//@media (min-width: $screen-md-min)
+//	.offer
+//		&__heroImage
+
+//@media (min-width: $screen-md-min)
+//	.offer
+//		position: relative
+//		height: $heroHeghtDesktop
+//		overflow: hidden
+//
+//		&__heroImage
+//			//border: 1px solid red
+//			//width: 100%
+//			height: 768px
+//			z-index: 1
+//			position: absolute
+//			top: 0
+//			left: 50%
+//			transform: translate(-50%, 0)
+//			//picture
+//				img
+//					margin: 0 auto
+//			// picture
+//
+//		&__image, &__video
+//			z-index: 2
+//			top: 50%
+//			transform: translate(0, -50%)
+//			img
+//				margin: 0 auto
