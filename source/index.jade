@@ -4,9 +4,9 @@ block title
 	title Home | SITENAME
 
 block content
-	- var link = "hero-assets"
-	- var link = "hero-assets/bat"
 	- var link = "hero-assets/dra"
+	- var link = "hero-assets/bat"
+	- var link = "hero-assets"
 
 	section.offer
 		.container-fluid.full
@@ -25,19 +25,39 @@ block content
 							//- 768 - 992
 							source(srcset="content/images/#{link}/1024.jpg" media="(min-width: 768px)" )
 							//- 335 - 768
-							source(srcset="content/images/#{link}/768.jpg" media="(min-width: 325px)")
+							//- source(srcset="content/images/#{link}/768.jpg" media="(min-width: 325px)")
+							//- 200 - 335
+							source(srcset="content/images/#{link}/768.jpg" media="(min-width: 200px)")
 							//- all unsupported
-							img(srcset="content/images/#{link}/1366.jpg" alt="offer on #{link} ")
+							img.heroimg(srcset="content/images/#{link}/1366.jpg" alt="offer on #{link} ")
 			.row.offer__content.row-no-padding
 				.col-md-12.col-lg-5.offer__image.text-center
-					//- mobile
-					img.img-responsive.hidden-sm.hidden-md.hidden-lg(src="content/images/hero-assets/offer-mobile.png")
-					//- tablet
-					img.img-responsive.hidden-xs.hidden-lg(src="content/images/hero-assets/offer-tablet.png")
 					//- destop
 					img.img-responsive.hidden-xs.hidden-sm.hidden-md(src="content/images/hero-assets/offer.png")
 				.col-lg-5.col-lg-offset-2.hidden-xs.hidden-sm.hidden-md.offer__video.text-center
 					img.img-responsive(src="content/images/hero-assets/video.png")
+	//- mobile- tablet content 
+	.container-fluid.full
+		.row.row-no-padding
+			.col-md-12.col-lg-5.offer__image.text-center
+				//- mobile
+				img.img-responsive.hidden-sm.hidden-md.hidden-lg(src="content/images/hero-assets/offer-mobile.png")
+				//- tablet
+				img.img-responsive.hidden-xs.hidden-lg(src="content/images/hero-assets/offer-tablet.png")
+
+	//- section.steps
+	section.steps
+		.container
+			.row.row-no-padding
+				.col-lg-4
+					span 1
+					p descripton 1
+				.col-lg-4
+					span 2
+					p descripton 2
+				.col-lg-4
+					span 3
+					p descripton 3
 			
 	script(src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js")
 		

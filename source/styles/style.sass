@@ -20,33 +20,33 @@
 @import bootstrap-sass/assets/stylesheets/bootstrap/buttons
 
 // Components
-@import bootstrap-sass/assets/stylesheets/bootstrap/component-animations
-@import bootstrap-sass/assets/stylesheets/bootstrap/dropdowns
-@import bootstrap-sass/assets/stylesheets/bootstrap/button-groups
-@import bootstrap-sass/assets/stylesheets/bootstrap/input-groups
-@import bootstrap-sass/assets/stylesheets/bootstrap/navs
-@import bootstrap-sass/assets/stylesheets/bootstrap/navbar
-@import bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs
-@import bootstrap-sass/assets/stylesheets/bootstrap/pagination
-@import bootstrap-sass/assets/stylesheets/bootstrap/pager
-@import bootstrap-sass/assets/stylesheets/bootstrap/labels
-@import bootstrap-sass/assets/stylesheets/bootstrap/badges
-@import bootstrap-sass/assets/stylesheets/bootstrap/jumbotron
-@import bootstrap-sass/assets/stylesheets/bootstrap/thumbnails
-@import bootstrap-sass/assets/stylesheets/bootstrap/alerts
-@import bootstrap-sass/assets/stylesheets/bootstrap/progress-bars
-@import bootstrap-sass/assets/stylesheets/bootstrap/media
-@import bootstrap-sass/assets/stylesheets/bootstrap/list-group
-@import bootstrap-sass/assets/stylesheets/bootstrap/panels
-@import bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed
-@import bootstrap-sass/assets/stylesheets/bootstrap/wells
-@import bootstrap-sass/assets/stylesheets/bootstrap/close
+// @import bootstrap-sass/assets/stylesheets/bootstrap/component-animations
+// @import bootstrap-sass/assets/stylesheets/bootstrap/dropdowns
+// @import bootstrap-sass/assets/stylesheets/bootstrap/button-groups
+// @import bootstrap-sass/assets/stylesheets/bootstrap/input-groups
+// @import bootstrap-sass/assets/stylesheets/bootstrap/navs
+// @import bootstrap-sass/assets/stylesheets/bootstrap/navbar
+// @import bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs
+// @import bootstrap-sass/assets/stylesheets/bootstrap/pagination
+// @import bootstrap-sass/assets/stylesheets/bootstrap/pager
+// @import bootstrap-sass/assets/stylesheets/bootstrap/labels
+// @import bootstrap-sass/assets/stylesheets/bootstrap/badges
+// @import bootstrap-sass/assets/stylesheets/bootstrap/jumbotron
+// @import bootstrap-sass/assets/stylesheets/bootstrap/thumbnails
+// @import bootstrap-sass/assets/stylesheets/bootstrap/alerts
+// @import bootstrap-sass/assets/stylesheets/bootstrap/progress-bars
+// @import bootstrap-sass/assets/stylesheets/bootstrap/media
+// @import bootstrap-sass/assets/stylesheets/bootstrap/list-group
+// @import bootstrap-sass/assets/stylesheets/bootstrap/panels
+// @import bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed
+// @import bootstrap-sass/assets/stylesheets/bootstrap/wells
+// @import bootstrap-sass/assets/stylesheets/bootstrap/close
 
 // Components w/ JavaScript
 @import bootstrap-sass/assets/stylesheets/bootstrap/modals
-@import bootstrap-sass/assets/stylesheets/bootstrap/tooltip
-@import bootstrap-sass/assets/stylesheets/bootstrap/popovers
-@import bootstrap-sass/assets/stylesheets/bootstrap/carousel
+// @import bootstrap-sass/assets/stylesheets/bootstrap/tooltip
+// @import bootstrap-sass/assets/stylesheets/bootstrap/popovers
+// @import bootstrap-sass/assets/stylesheets/bootstrap/carousel
 
 // Utility classes
 @import bootstrap-sass/assets/stylesheets/bootstrap/utilities
@@ -65,96 +65,16 @@
 @import layout/footer
 @import layout/main
 
+@import layout/_row-nopadding
+
 // Components
 
-$heroHeghtDesktop: 700px
-$heroHeghtTablet: 450px
+@import modules/offer/offer
 
 
-.row-no-padding
-	margin-left: 0
-	margin-right: 0
-	[class*="col-"]
-		padding-left: 0 !important
-		padding-right: 0 !important
-
-.full
-	padding-left: 0
-	padding-right: 0
-	margin-left: 0
-	margin-right: 0
-	width: 100vw
-
-section
-	background: black
-
-.offer
-	width: 100vw
-	overflow: hidden
-	position: relative
-	//border: 1px solid red
-	//overflow: hidden
-	height: $heroHeghtDesktop
-	&__heroImage
-		position: relative
-		//border: 1px solid blue
-		//display: inline-block
-		height: $heroHeghtDesktop
-		width: 100vw
-		overflow: hidden
-		img
-			display: block
-			//width: auto
-			height: $heroHeghtDesktop
-			z-index: 1
-			position: absolute
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
-	&__content
-		width: 100vw
-		margin: 0
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate( -50%, -50%)
-		z-index: 2
-	&__image, &__video
-		img
-			margin: 0 auto
-
-//@media (max-width: $screen-sm-max) and (max-width: $screen-md-min)
-@media (max-width: $screen-md-max)
-	.offer
-		width: 100vw
-		overflow: scroll
-		height: auto
-		&__heroImage
-			//position: relative
-			//border: 1px solid blue
-			//display: inline-block
-			height: $heroHeghtTablet
-			width: 100vw
-			//overflow: hidden
-		&__content
-			width: 100vw
-			position: static
-			top: 0
-			left: 0
-			transform: translate( 0, 0)
-			z-index: 2
-			img
-				//border: 1px solid red
-				position: static
-				top: 50%
-				left: 50%
-				transform: translate( 0, 0)
-		&__image, &__video
-			img
-				margin: 0 auto
 
 
-	//&__video
+//&__video
 		//position: absolute
 		//top: 0
 //	.offer

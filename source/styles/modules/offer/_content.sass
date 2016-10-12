@@ -1,0 +1,32 @@
+.offer
+	&__content
+		width: 100vw
+		margin: 0
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate( -50%, -50%)
+		z-index: 2
+	&__image, &__video
+		img
+			margin: 0 auto
+			max-width: 100%
+			// border: 1px solid red
+@media (max-width: $screen-md-max)
+	.offer
+		&__content
+			width: 100vw
+			position: static
+			top: 700px
+			left: 0
+			transform: translate( 0, 0)
+			z-index: 2
+			img
+				// border: 1px solid red
+				position: static
+				top: 50%
+				left: 50%
+				transform: translate( 0, 0)
+		&__image, &__video
+			img
+				margin: 0 auto

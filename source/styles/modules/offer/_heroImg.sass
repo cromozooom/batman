@@ -1,0 +1,51 @@
+.offer
+	&__heroImage
+		position: relative
+		//border: 1px solid blue
+		//display: inline-block
+		height: $heroHeghtMobile
+		width: 100vw
+		overflow: hidden
+		img.heroimg
+			display: block
+			//width: auto
+			height: $heroHeghtMobile
+			z-index: 1
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate(-50%, 0%)
+
+@media (min-width: $screen-sm-min)
+	.offer
+		&__heroImage
+			position: relative
+			//border: 1px solid blue
+			display: inline-block
+			height: $heroHeghtTablet
+			width: 100vw
+			overflow: hidden
+			top: 0%
+			left: 50%
+			transform: translate(-50%, 0%)
+			img.heroimg
+				height: $heroHeghtTablet
+
+@media (min-width: $screen-md-min)
+	.offer
+		&__heroImage
+			height: $heroHeghtDesktop
+			top: 0
+			left: 50%
+			transform: translate(-50%, 0%)
+			img.heroimg
+				height: $heroHeghtDesktop
+
+//.offer
+//  border-top: 3px solid blue
+//@media (min-width: $screen-sm-min)
+//	.offer
+//		border-top: 3px solid red
+//@media (min-width: $screen-md-min)
+//	.offer
+//		border-top: 3px solid green
